@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index3</title>
+</head>
+<body>
+
+<table>
+    <th>ID</th>
+    <th>姓名</th>
+    <th>年龄</th>
+    <th>序号</th>
+    <!--
+    iterStat称作状态变量，属性有：
+        index:当前迭代对象的index（从0开始计算）
+        count: 当前迭代对象的index(从1开始计算)
+        size:被迭代对象的大小
+        current:当前迭代变量
+        even/odd:布尔值，当前循环是否是偶数/奇数（从0开始计算）
+        first:布尔值，当前循环是否是第一个
+        last:布尔值，当前循环是否是最后一个
+    -->
+    <tr th:each="user,iterStat : ${userList}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.age}"></td>
+        <td th:text="${iterStat.index}">index</td>
+
+
+        <td th:text="${iterStat.count}">count</td>
+
+        <td th:text="${iterStat.size}">size</td>
+
+
+        <td th:text="${iterStat.current}">current</td>
+        <td th:text="${iterStat.even}">even</td>
+        <td th:text="${iterStat.first}">first</td>
+    </tr>
+</table>
+
+</body>
+</html>

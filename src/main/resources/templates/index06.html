@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index6</title>
+</head>
+<body>
+
+<!--日期格式化-->
+<span th:text="${#dates.format(date,'yyyy年MM月dd日 hh:mm:ss')}"></span>
+<br>
+<!--数字格式化 参数二：整数位保留位数  0.12 参数二：小数位保留位数并四舍五入-->
+<span th:text="${#numbers.formatDecimal(num,1,2)}"></span>
+<br>
+<!--String内置函数-->
+<span th:if="${!#strings.isEmpty(str)}">hello str</span>
+<br>
+<span th:text="${#strings.abbreviate(str,20)}"></span>
+
+<br>
+
+<span th:text="${#strings.substring(str,0,19)}"></span>
+
+</body>
+</html>

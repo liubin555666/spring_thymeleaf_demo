@@ -1,0 +1,7 @@
+server:
+  port: 9001
+
+#禁用Thymeleaf缓存
+spring:
+  thymeleaf:
+    cache: false

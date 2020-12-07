@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>index5</title>
+    <link rel="stylesheet" type="text/css" href="../static/pages-cart.css" th:href="@{/pages-cart.css}">
+</head>
+<body>
+
+<span th:text="${flag}"></span>
+<h1 th:if="${flag=='yes'}">中公教育</h1>
+<h1 th:unless="${flag=='llslslls'}">优就业</h1>
+
+
+<div th:switch="${menu}">
+    <p th:case="admin">user is admin</p>
+    <p th:case="${manager}">user is manager</p>
+</div>
+
+<!--引入片段-->
+<!--将片段直接插入页码样式之中-->
+<div th:insert="~{footer :: copy}"></div>
+<!--将片段的样式去除-->
+<div th:include="~{footer :: copy}"></div>
+<!--将片段的样式替换掉页码样式-->
+<div th:replace="~{footer :: copy}"></div>
+
+
+</body>
+</html>
