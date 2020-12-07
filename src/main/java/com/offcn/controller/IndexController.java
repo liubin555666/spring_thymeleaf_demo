@@ -70,6 +70,11 @@ public class IndexController {
     }
 
 
+    /**
+     *
+     * @param model
+     * @return
+     */
     @RequestMapping("/index04")
     public String index04(Model model) {
         model.addAttribute("username", "张三");
