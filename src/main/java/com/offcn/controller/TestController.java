@@ -10,7 +10,13 @@ public class TestController {
         System.out.println("hahaha");
         //update by lb
         if(true){
-        }      
+
+        }
+
+        //add by lb
+        System.out.println("分支上写的代码");
+
+
     }
 
 }
