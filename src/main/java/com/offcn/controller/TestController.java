@@ -8,7 +8,9 @@ public class TestController {
 
     public void test(){
         System.out.println("hahaha");
+        //update by lb
+        if(true){
+        }      
     }
-
 
 }
